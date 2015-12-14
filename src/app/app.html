@@ -1,3 +1,7 @@
 
-Hello {{name}}<br>
-<input [(ng-model)]="name">
+<span *ng-for="#_color of colors">
+   <label>{{_color}}</label>
+   <input type="radio" name="color" (click)="color = _color" value="_color">
+</span><br>
+color: <span>{{color}}</span><br>
+<span my-dir [hi-color]="color" default-color="tan">lala</span>
